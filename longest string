@@ -1,0 +1,28 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+class LongestWord
+{
+public static void main(String[] args) throws FileNotFoundException
+{
+new LongestWord().findLongestWord();
+}
+public String findLongestWord() throws FileNotFoundException
+{
+String longestWord=&quot;&quot;;
+String currWord;
+Scanner sc=new Scanner(new File(&quot;D:\\srm.txt&quot;));
+while(sc.hasNext())
+{
+currWord=sc.next();
+if(currWord.length()&gt;longestWord.length())
+{
+longestWord=currWord;
+}
+}
+
+System.out.println(&quot;\nLongest word is &quot;+longestWord+&quot;\n&quot;);
+return longestWord;
+}
+
+}
